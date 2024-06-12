@@ -1,0 +1,64 @@
+/* globals.css */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Roboto:wght@300;400&display=swap');
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background-image: url('/images/vintage3.jpg');
+  background-size: cover;
+  background-position: center;
+}
+
+h1, h2 {
+  font-family: 'Playfair Display', serif;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.5s ease-in-out forwards;
+}
+
+/* Styles untuk layar kecil (misalnya, perangkat seluler) */
+@media (max-width: 768px) {
+  .hero {
+    padding-top: 20px; /* Mengurangi padding atas pada bagian hero untuk perangkat seluler */
+    padding-bottom: 20px; /* Mengurangi padding bawah pada bagian hero untuk perangkat seluler */
+  }
+
+  .hero h1 {
+    font-size: 3rem; /* Mengurangi ukuran font judul pada bagian hero untuk perangkat seluler */
+    margin-top: 10px; /* Mengurangi margin atas pada judul untuk perangkat seluler */
+    margin-bottom: 10px; /* Mengurangi margin bawah pada judul untuk perangkat seluler */
+  }
+
+  .hero p {
+    font-size: 1.5rem; /* Mengurangi ukuran font paragraf pada bagian hero untuk perangkat seluler */
+  }
+
+  .company-overview {
+    padding-top: 20px; /* Mengurangi padding atas pada bagian company overview untuk perangkat seluler */
+    padding-bottom: 20px; /* Mengurangi padding bawah pada bagian company overview untuk perangkat seluler */
+  }
+
+  .company-overview h2 {
+    font-size: 2.5rem; /* Mengurangi ukuran font judul pada bagian company overview untuk perangkat seluler */
+    margin-top: 10px; /* Mengurangi margin atas pada judul untuk perangkat seluler */
+    margin-bottom: 10px; /* Mengurangi margin bawah pada judul untuk perangkat seluler */
+  }
+
+  .company-overview p {
+    font-size: 1.25rem; /* Mengurangi ukuran font paragraf pada bagian company overview untuk perangkat seluler */
+  }
+}
