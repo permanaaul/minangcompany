@@ -1,4 +1,4 @@
-'use client'
+'use client';
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
@@ -63,10 +63,6 @@ export default function HomePage() {
             )}
           </div>
         </div>
-
-        <Link href="/about" legacyBehavior>
-          <a className="text-gray-300 hover:text-white mt-8 inline-block transition duration-300">Learn more about us</a>
-        </Link>
       </section>
 
       {/* Products */}

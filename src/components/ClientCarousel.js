@@ -13,7 +13,7 @@ const ClientCarousel = () => {
       if (emblaRef.current) {
         emblaRef.current.scrollNext();
       }
-    }, 2500); // Ganti slide setiap 3 detik
+    }, 3000); // Ganti slide setiap 3 detik
 
     return () => clearInterval(interval); // Bersihkan interval saat komponen unmount
   }, []);
@@ -30,9 +30,9 @@ const ClientCarousel = () => {
         <div style={{ width: '100%', height: '500px', position: 'relative' }}>
           <Image
             src='/images/kotapadang.jpg'
-            fill
-            style={{ objectFit: 'cover' }}
             alt='Kota Padang 1'
+            layout='fill'
+            objectFit='cover'
           />
         </div>
       </Carousel.Slide>
@@ -40,13 +40,12 @@ const ClientCarousel = () => {
         <div style={{ width: '100%', height: '500px', position: 'relative' }}>
           <Image
             src='/images/kotapadangdua.jpg'
-            fill
-            style={{ objectFit: 'cover' }}
             alt='Kota Padang 2'
+            layout='fill'
+            objectFit='cover'
           />
         </div>
       </Carousel.Slide>
-      
     </Carousel>
   );
 };
