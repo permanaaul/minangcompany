@@ -1,4 +1,3 @@
-'use client'
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
@@ -77,7 +76,7 @@ export default function HomePage() {
         <h2 className="text-4xl font-bold text-center mb-8">What Our Customers Say</h2>
         <div className="space-y-8 max-w-4xl mx-auto">
           <blockquote className="p-6 border-l-4 border-gray-600 bg-gray-700 rounded-lg shadow-md">
-            <p className="text-lg italic font-semibold">&quot;The best products I've ever used! Highly recommend to everyone.&quot;</p>
+            <p className="text-lg italic font-semibold">&quot;The best products I&apos;ve ever used! Highly recommend to everyone.&quot;</p>
             <footer className="mt-2 text-sm text-gray-400">- Customer A</footer>
           </blockquote>
           <blockquote className="p-6 border-l-4 border-gray-600 bg-gray-700 rounded-lg shadow-md">
@@ -85,7 +84,7 @@ export default function HomePage() {
             <footer className="mt-2 text-sm text-gray-400">- Customer B</footer>
           </blockquote>
           <blockquote className="p-6 border-l-4 border-gray-600 bg-gray-700 rounded-lg shadow-md">
-            <p className="text-lg italic font-semibold">&quot;I love the variety of products available. There's something for everyone.&quot;</p>
+            <p className="text-lg italic font-semibold">&quot;I love the variety of products available. There&apos;s something for everyone.&quot;</p>
             <footer className="mt-2 text-sm text-gray-400">- Customer C</footer>
           </blockquote>
         </div>
