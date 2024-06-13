@@ -68,7 +68,7 @@ h1, h2 {
 .carousel-arrow {
   position: absolute;
   top: 50%;
-  transform: translateY(-50%);
+  transform: translateY(-1000%);
   background: black;
   color: white;
   padding: 0.3rem;
@@ -86,48 +86,4 @@ h1, h2 {
 
 .carousel-arrow.prev {
   left: 5px;
-}
-
-@media (max-width: 768px) {
-  .carousel-arrow {
-    padding: 0.2rem;
-  }
-
-  .carousel-arrow.next {
-    right: 2px;
-  }
-
-  .carousel-arrow.prev {
-    left: 2px;
-  }
-
-  .hero {
-    padding-top: 10px;
-    padding-bottom: 10px;
-  }
-
-  .hero h1 {
-    font-size: 2.5rem;
-    margin-top: 5px;
-    margin-bottom: 5px;
-  }
-
-  .hero p {
-    font-size: 1rem;
-  }
-
-  .company-overview {
-    padding-top: 10px;
-    padding-bottom: 10px;
-  }
-
-  .company-overview h2 {
-    font-size: 2rem;
-    margin-top: 5px;
-    margin-bottom: 5px;
-  }
-
-  .company-overview p {
-    font-size: 1rem;
-  }
 }

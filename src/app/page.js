@@ -1,4 +1,4 @@
-// pages/index.js
+
 'use client'
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
@@ -64,7 +64,6 @@ export default function HomePage() {
                     layout="fixed"
                     objectFit="cover"
                     className="rounded-full"
-                    
                   />
                 </div>
                 <p className="text-xl font-semibold">{`${teamMember.name.first} ${teamMember.name.last}`}</p>
