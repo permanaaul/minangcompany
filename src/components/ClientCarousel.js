@@ -1,9 +1,8 @@
-'use client';
-
+// ClientCarousel.js
 import { Carousel } from '@mantine/carousel';
 import { FaArrowLeft, FaArrowRight } from 'react-icons/fa';
 import Image from 'next/image';
-import { useEffect, useRef } from 'react';
+import { useRef } from 'react';
 
 const ClientCarousel = () => {
   const emblaRef = useRef(null);
@@ -13,7 +12,7 @@ const ClientCarousel = () => {
       if (emblaRef.current) {
         emblaRef.current.scrollNext();
       }
-    }, 3000); // Ganti slide setiap 3 detik
+    }, 2500); // Ganti slide setiap 3 detik
 
     return () => clearInterval(interval); // Bersihkan interval saat komponen unmount
   }, []);
@@ -30,9 +29,9 @@ const ClientCarousel = () => {
         <div style={{ width: '100%', height: '500px', position: 'relative' }}>
           <Image
             src='/images/kotapadang.jpg'
+            layout="fill"
+            objectFit="cover"
             alt='Kota Padang 1'
-            layout='fill'
-            objectFit='cover'
           />
         </div>
       </Carousel.Slide>
@@ -40,9 +39,9 @@ const ClientCarousel = () => {
         <div style={{ width: '100%', height: '500px', position: 'relative' }}>
           <Image
             src='/images/kotapadangdua.jpg'
+            layout="fill"
+            objectFit="cover"
             alt='Kota Padang 2'
-            layout='fill'
-            objectFit='cover'
           />
         </div>
       </Carousel.Slide>
