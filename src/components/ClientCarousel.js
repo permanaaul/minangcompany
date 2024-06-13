@@ -36,7 +36,8 @@ const ClientCarousel = () => {
             loading="eager" // Nonaktifkan lazy loading di sini
             priority={true} // Prioritaskan gambar ini
             sizes="(max-width: 768px) 100vw, 50vw"
-            srcSet="/images/kotapadang.jpg 640w, /images/kotapadang.jpg 1024w, /images/kotapadang.jpg 1920w"
+            width={1920} // Tetapkan lebar dan tinggi
+            height={1080}
           />
         </div>
       </Carousel.Slide>
@@ -50,7 +51,8 @@ const ClientCarousel = () => {
             loading="eager" // Nonaktifkan lazy loading di sini
             priority={true} // Prioritaskan gambar ini
             sizes="(max-width: 768px) 100vw, 50vw"
-            srcSet="/images/kotapadangdua.jpg 640w, /images/kotapadangdua.jpg 1024w, /images/kotapadangdua.jpg 1920w"
+            width={1920} // Tetapkan lebar dan tinggi
+            height={1080}
           />
         </div>
       </Carousel.Slide>
