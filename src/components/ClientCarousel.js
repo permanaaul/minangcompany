@@ -1,4 +1,3 @@
-// ClientCarousel.js
 'use client';
 import { Carousel } from '@mantine/carousel';
 import { FaArrowLeft, FaArrowRight } from 'react-icons/fa';
@@ -34,9 +33,7 @@ const ClientCarousel = () => {
             objectFit="cover"
             alt='Kota Padang 1'
             loading="eager" // Nonaktifkan lazy loading di sini
-            priority={true} // Prioritaskan gambar ini
-            sizes="(max-width: 768px) 100vw, 50vw"
-            srcSet="/images/kotapadang.jpg 640w, /images/kotapadang.jpg 1024w, /images/kotapadang.jpg 1920w"
+            priority // Prioritaskan pemuatan gambar ini
           />
         </div>
       </Carousel.Slide>
@@ -48,9 +45,6 @@ const ClientCarousel = () => {
             objectFit="cover"
             alt='Kota Padang 2'
             loading="eager" // Nonaktifkan lazy loading di sini
-            priority={true} // Prioritaskan gambar ini
-            sizes="(max-width: 768px) 100vw, 50vw"
-            srcSet="/images/kotapadangdua.jpg 640w, /images/kotapadangdua.jpg 1024w, /images/kotapadangdua.jpg 1920w"
           />
         </div>
       </Carousel.Slide>
