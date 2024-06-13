@@ -34,44 +34,46 @@ export default function HomePage() {
 
       {/* Company Overview */}
       <section className="company-overview text-center py-8 bg-gray-800 rounded-lg shadow-lg">
-  <h2 className="text-4xl font-bold mb-6">About Padang Heritage</h2>
-  <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
-    <div className="p-6 bg-gray-700 rounded-lg shadow-lg hover:bg-gray-600 transition duration-300">
-      <h3 className="text-3xl font-semibold mb-4">Company History</h3>
-      <p className="text-lg leading-relaxed mb-4">
-        Padang Heritage was founded with a passion to showcase the rich cultural heritage and vibrant traditions of the Minangkabau people.
-      </p>
-    </div>
-
-    <div className="p-6 bg-gray-700 rounded-lg shadow-lg hover:bg-gray-600 transition duration-300">
-      <h3 className="text-3xl font-semibold mb-4">Culture</h3>
-      <p className="text-lg leading-relaxed mb-4">
-        At Padang Heritage, our culture is deeply rooted in respect, community, and a shared love for our heritage.
-      </p>
-    </div>
-
-    <div className="p-6 bg-gray-700 rounded-lg shadow-lg hover:bg-gray-600 transition duration-300">
-      <h3 className="text-3xl font-semibold mb-4">Our Team</h3>
-      {teamMember ? (
-        <div className="text-center">
-          <div style={{ width: '200px', height: '200px', position: 'relative' }}>
-            <Image
-              src={teamMember.picture.large}
-              alt={`${teamMember.name.first} ${teamMember.name.last}`}
-              layout="fill"
-              objectFit="cover"
-              className="rounded-full"
-            />
+        <h2 className="text-4xl font-bold mb-6">About Padang Heritage</h2>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
+          <div className="p-6 bg-gray-700 rounded-lg shadow-lg hover:bg-gray-600 transition duration-300">
+            <h3 className="text-3xl font-semibold mb-4">Company History</h3>
+            <p className="text-lg leading-relaxed mb-4">
+              Padang Heritage was founded with a passion to showcase the rich cultural heritage and vibrant traditions of the Minangkabau people.
+            </p>
           </div>
-          <p className="text-xl font-semibold">{`${teamMember.name.first} ${teamMember.name.last}`}</p>
-          <p className="text-gray-400">{teamMember.email}</p>
+
+          <div className="p-6 bg-gray-700 rounded-lg shadow-lg hover:bg-gray-600 transition duration-300">
+            <h3 className="text-3xl font-semibold mb-4">Culture</h3>
+            <p className="text-lg leading-relaxed mb-4">
+              At Padang Heritage, our culture is deeply rooted in respect, community, and a shared love for our heritage.
+            </p>
+          </div>
+
+          <div className="p-6 bg-gray-700 rounded-lg shadow-lg hover:bg-gray-600 transition duration-300">
+            <h3 className="text-3xl font-semibold mb-4">Our Team</h3>
+            {teamMember ? (
+              <div className="text-center">
+                <div style={{ width: '200px', height: '200px', position: 'relative' }}>
+                  <Image
+                    src={teamMember.picture.large}
+                    alt={`${teamMember.name.first} ${teamMember.name.last}`}
+                    width={200}
+                    height={200}
+                    layout="fixed"
+                    objectFit="cover"
+                    className="rounded-full"
+                  />
+                </div>
+                <p className="text-xl font-semibold">{`${teamMember.name.first} ${teamMember.name.last}`}</p>
+                <p className="text-gray-400">{teamMember.email}</p>
+              </div>
+            ) : (
+              <p className="text-xl">Loading team member...</p>
+            )}
+          </div>
         </div>
-      ) : (
-        <p className="text-xl">Loading team member...</p>
-      )}
-    </div>
-  </div>
-</section>
+      </section>
 
       {/* Products */}
       <Products limit={3} />

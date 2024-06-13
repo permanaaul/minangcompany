@@ -1,10 +1,9 @@
 // ClientCarousel.js
-'use client'
+'use client';
 import { Carousel } from '@mantine/carousel';
 import { FaArrowLeft, FaArrowRight } from 'react-icons/fa';
 import Image from 'next/image';
 import React, { useEffect, useRef } from 'react';
-
 
 const ClientCarousel = () => {
   const emblaRef = useRef(null);
@@ -34,6 +33,7 @@ const ClientCarousel = () => {
             layout="fill"
             objectFit="cover"
             alt='Kota Padang 1'
+            loading="eager" // Nonaktifkan lazy loading di sini
           />
         </div>
       </Carousel.Slide>
@@ -44,6 +44,7 @@ const ClientCarousel = () => {
             layout="fill"
             objectFit="cover"
             alt='Kota Padang 2'
+            loading="eager" // Nonaktifkan lazy loading di sini
           />
         </div>
       </Carousel.Slide>
