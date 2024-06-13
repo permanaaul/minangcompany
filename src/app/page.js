@@ -64,7 +64,7 @@ export default function HomePage() {
                     layout="fixed"
                     objectFit="cover"
                     className="rounded-full"
-                    placeholder="blur" // Gunakan placeholder untuk gambar
+                    
                   />
                 </div>
                 <p className="text-xl font-semibold">{`${teamMember.name.first} ${teamMember.name.last}`}</p>

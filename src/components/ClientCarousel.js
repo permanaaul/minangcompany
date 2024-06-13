@@ -13,7 +13,7 @@ const ClientCarousel = () => {
       if (emblaRef.current) {
         emblaRef.current.scrollNext();
       }
-    }, 2500); // Ganti slide setiap 3 detik
+    }, 2500); // Ganti slide setiap 2.5 detik
 
     return () => clearInterval(interval); // Bersihkan interval saat komponen unmount
   }, []);
@@ -34,6 +34,9 @@ const ClientCarousel = () => {
             objectFit="cover"
             alt='Kota Padang 1'
             loading="eager" // Nonaktifkan lazy loading di sini
+            priority={true} // Prioritaskan gambar ini
+            sizes="(max-width: 768px) 100vw, 50vw"
+            srcSet="/images/kotapadang.jpg 640w, /images/kotapadang.jpg 1024w, /images/kotapadang.jpg 1920w"
           />
         </div>
       </Carousel.Slide>
@@ -45,6 +48,9 @@ const ClientCarousel = () => {
             objectFit="cover"
             alt='Kota Padang 2'
             loading="eager" // Nonaktifkan lazy loading di sini
+            priority={true} // Prioritaskan gambar ini
+            sizes="(max-width: 768px) 100vw, 50vw"
+            srcSet="/images/kotapadangdua.jpg 640w, /images/kotapadangdua.jpg 1024w, /images/kotapadangdua.jpg 1920w"
           />
         </div>
       </Carousel.Slide>
