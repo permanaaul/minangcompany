@@ -10,23 +10,14 @@ const ClientCarousel = dynamic(() => import('../components/ClientCarousel'), { s
 
 export default function HomePage() {
   const [teamMember, setTeamMember] = useState(null);
-  const [error, setError] = useState(null);
 
   useEffect(() => {
     fetch('https://randomuser.me/api/?results=1')
-      .then(response => {
-        if (!response.ok) {
-          throw new Error('Failed to fetch team member');
-        }
-        return response.json();
-      })
+      .then(response => response.json())
       .then(data => {
         setTeamMember(data.results[0]);
       })
-      .catch(error => {
-        console.error('Error fetching team member:', error);
-        setError('Failed to fetch team member. Please try again later.');
-      });
+      .catch(error => console.error('Error fetching team member:', error));
   }, []);
 
   return (
@@ -73,13 +64,12 @@ export default function HomePage() {
                     layout="fixed"
                     objectFit="cover"
                     className="rounded-full"
+                    placeholder="blur" // Gunakan placeholder untuk gambar
                   />
                 </div>
                 <p className="text-xl font-semibold">{`${teamMember.name.first} ${teamMember.name.last}`}</p>
                 <p className="text-gray-400">{teamMember.email}</p>
               </div>
-            ) : error ? (
-              <p className="text-xl text-red-500">{error}</p>
             ) : (
               <p className="text-xl">Loading team member...</p>
             )}
