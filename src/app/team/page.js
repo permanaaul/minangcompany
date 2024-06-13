@@ -23,21 +23,21 @@ export default function TeamPage() {
   }, []);
 
   return (
-    <div className="container mx-auto p-4">
-      <h1 className="text-4xl font-bold text-center mb-8">Our Team</h1>
+    <div className="container mx-auto p-4 bg-gray-900">
+      <h1 className="text-4xl font-bold text-center mb-8 text-white">Our Team</h1>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-4" >
         {teamMembers.map((member, index) => (
-          <div key={index} className="bg-white p-6 rounded-lg shadow-lg transform hover:scale-105 transition-transform duration-300 ease-in-out" style={{ backgroundImage: "url('/images/vintage6.jpg')", backgroundSize: "cover", backgroundPosition: "center" }}>
+          <div key={index} className="bg-gray-700 p-6 rounded-lg shadow-lg transform hover:scale-105 transition-transform duration-300 ease-in-out" >
             <div className="relative w-24 h-24 mx-auto mb-4">
   <Image src={member.picture.large} alt={`Profile of ${member.name.first} ${member.name.last}`} width={96} height={96} className="w-full h-full rounded-full object-cover border-4 border-white shadow-md" />
   <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black opacity-20 rounded-full"></div>
 </div>
 
-            <h2 className="text-2xl font-semibold mt-4 mb-2">{`${member.name.first} ${member.name.last}`}</h2>
-            <p className="text-gray-500 mb-4">{member.email}</p>
-            <p className="text-gray-600 mb-2">Location: {`${member.location.city}, ${member.location.country}`}</p>
-            <p className="text-gray-600 mb-2">Phone: {member.phone}</p>
-            <p className="text-gray-600 mb-4">Date of Birth: {new Date(member.dob.date).toLocaleDateString()}</p>
+            <h2 className="text-2xl font-semibold mt-4 mb-2 text-white">{`${member.name.first} ${member.name.last}`}</h2>
+            <p className="text-white mb-4">{member.email}</p>
+            <p className="text-white">Location: {`${member.location.city}, ${member.location.country}`}</p>
+            <p className="text-white">Phone: {member.phone}</p>
+            <p className="text-white">Date of Birth: {new Date(member.dob.date).toLocaleDateString()}</p>
             <div className="flex justify-center space-x-4">
               <a href="#" className="text-blue-500 hover:text-blue-700 transition-colors duration-300">
                 <i className="fab fa-linkedin fa-lg"></i>

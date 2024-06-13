@@ -118,10 +118,10 @@ export default function Products({limit}) {
   const productsToShow = makanan.slice(0, limit);
 
   return (
-    <div className="bg-cover bg-center border-4 border-black rounded-lg" style={{ backgroundImage: "url('/images/vintage1.jpg')", backgroundSize: "cover", backgroundPosition: "center" }}>
+    <div className="bg-cover bg-center rounded-lg  bg-gray-800" >
       <div className="py-12 px-6 sm:px-8 lg:px-16">
-        <h2 className="text-4xl font-bold text-black mb-8 text-center">Our Products</h2>
-        <p className="text-lg max-w-2xl mx-auto mb-8 text-center font-bold">Discover our range of products inspired by the unique heritage of Padang and the Minangkabau culture.</p>
+        <h2 className="text-4xl font-bold text-white mb-8 text-center">Our Products</h2>
+        <p className="text-lg max-w-2xl mx-auto mb-8 text-center font-bold text-white">Discover our range of products inspired by the unique heritage of Padang and the Minangkabau culture.</p>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" >
           {productsToShow.map((product, id) => (
             <Link href="/product" key={id}>
@@ -130,15 +130,11 @@ export default function Products({limit}) {
                 className="p-6 bg-gray-100 rounded-lg shadow-lg hover:shadow-2xl transition-shadow duration-300 transform hover:-translate-y-2 opacity-0 animate-fade-in" 
                 style={{ 
                   animationDelay: `${id * 0.3}s`,
-                  backgroundImage: `url('/images/vintage6.jpg')`,
-                  backgroundSize: "cover",
-                  backgroundPosition: "center",
-                  backgroundRepeat: "no-repeat"
                  }}
               >
                 <Image src={product.image} alt={product.name} width={400} height={192} className="w-full h-48 object-cover rounded-t-lg mb-4" />
                 <h3 className="text-2xl font-bold text-black mb-2">{product.name}</h3>
-                <p className="text-black-600 font-bold mb-4">{product.description}</p>
+                <p className="text-black font-bold mb-4">{product.description}</p>
               </div>
             </Link>
           ))}

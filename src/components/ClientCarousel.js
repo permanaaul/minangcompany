@@ -1,40 +1,54 @@
-// clientcarousel
 'use client';
 
 import { Carousel } from '@mantine/carousel';
 import { FaArrowLeft, FaArrowRight } from 'react-icons/fa';
 import Image from 'next/image';
+import { useEffect, useRef } from 'react';
 
+const ClientCarousel = () => {
+  const emblaRef = useRef(null);
 
-const ClientCarousel = () => (
-  <Carousel
-    nextControlIcon={<div className='bg-black-300 text-black p-6 rounded-full flex items-center justify-center transform -translate-y-1/2 top-1/2 absolute right-0'><FaArrowRight /></div>}
-    previousControlIcon={<div className='bg-black-300 text-black p-6 rounded-full flex items-center justify-center transform -translate-y-1/2 top-1/2 absolute left-0'><FaArrowLeft /></div>}
-    withIndicators
-    loop
-    autoplay={{ delay: 3000 }}
-  >
-    <Carousel.Slide>
-      <div style={{ width: '100%', height: '500px', position: 'relative' }}>
-        <Image
-          src='/images/kotapadang.jpg'
-          fill
-          style={{ objectFit: 'cover' }}
-          alt='Kota Padang 1'
-        />
-      </div>
-    </Carousel.Slide>
-    <Carousel.Slide>
-      <div style={{ width: 'full', height: '500px', position: 'relative' }}>
-        <Image
-          src='/images/kotapadangdua.jpg'
-          fill
-          style={{ objectFit: 'cover' }}
-          alt='Kota Padang 2'
-        />
-      </div>
-    </Carousel.Slide>
-  </Carousel>
-);
+  useEffect(() => {
+    const interval = setInterval(() => {
+      if (emblaRef.current) {
+        emblaRef.current.scrollNext();
+      }
+    }, 2500); // Ganti slide setiap 3 detik
+
+    return () => clearInterval(interval); // Bersihkan interval saat komponen unmount
+  }, []);
+
+  return (
+    <Carousel
+      getEmblaApi={embla => (emblaRef.current = embla)}
+      nextControlIcon={<div className='carousel-arrow next'><FaArrowRight /></div>}
+      previousControlIcon={<div className='carousel-arrow prev'><FaArrowLeft /></div>}
+      withIndicators
+      loop
+    >
+      <Carousel.Slide>
+        <div style={{ width: '100%', height: '500px', position: 'relative' }}>
+          <Image
+            src='/images/kotapadang.jpg'
+            fill
+            style={{ objectFit: 'cover' }}
+            alt='Kota Padang 1'
+          />
+        </div>
+      </Carousel.Slide>
+      <Carousel.Slide>
+        <div style={{ width: '100%', height: '500px', position: 'relative' }}>
+          <Image
+            src='/images/kotapadangdua.jpg'
+            fill
+            style={{ objectFit: 'cover' }}
+            alt='Kota Padang 2'
+          />
+        </div>
+      </Carousel.Slide>
+      
+    </Carousel>
+  );
+};
 
 export default ClientCarousel;

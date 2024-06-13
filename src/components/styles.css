@@ -33,7 +33,7 @@ header {
   
   nav a {
     /* Style links */
-    color: #fff; /* Set text color */
+    color: #e7e7e7; /* Set text color */
     text-decoration: none; /* Remove underline */
     transition: color 0.3s; /* Add smooth transition for color change */
   }

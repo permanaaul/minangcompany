@@ -6,9 +6,9 @@
 
 body {
   font-family: 'Roboto', sans-serif;
-  background-image: url('/images/vintage3.jpg');
   background-size: cover;
   background-position: center;
+  background-color: rgb(88, 88, 88);
 }
 
 h1, h2 {
@@ -61,4 +61,29 @@ h1, h2 {
   .company-overview p {
     font-size: 1.25rem; /* Mengurangi ukuran font paragraf pada bagian company overview untuk perangkat seluler */
   }
+}
+
+/* Tambahkan ini ke file CSS global Anda, misalnya, globals.css */
+
+.carousel-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-1000%);
+  background: black;
+  color: white;
+  padding: 0.3rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 1;
+}
+
+.carousel-arrow.next {
+  right: 5px;
+}
+
+.carousel-arrow.prev {
+  left: 5px;
 }
