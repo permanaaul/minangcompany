@@ -1,8 +1,10 @@
 // ClientCarousel.js
+'use client'
 import { Carousel } from '@mantine/carousel';
 import { FaArrowLeft, FaArrowRight } from 'react-icons/fa';
 import Image from 'next/image';
-import { useRef } from 'react';
+import React, { useEffect, useRef } from 'react';
+
 
 const ClientCarousel = () => {
   const emblaRef = useRef(null);
