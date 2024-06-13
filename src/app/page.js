@@ -54,7 +54,15 @@ export default function HomePage() {
             <h3 className="text-3xl font-semibold mb-4">Our Team</h3>
             {teamMember ? (
               <div className="text-center">
-                <Image src={teamMember.picture.large} alt={`${teamMember.name.first} ${teamMember.name.last}`} width={200} height={200} className="rounded-full mx-auto mb-4" />
+                <div style={{ width: '200px', height: '200px', position: 'relative' }}>
+                  <Image
+                    src={teamMember.picture.large}
+                    alt={`${teamMember.name.first} ${teamMember.name.last}`}
+                    layout="fill"
+                    objectFit="cover"
+                    className="rounded-full"
+                  />
+                </div>
                 <p className="text-xl font-semibold">{`${teamMember.name.first} ${teamMember.name.last}`}</p>
                 <p className="text-gray-400">{teamMember.email}</p>
               </div>
