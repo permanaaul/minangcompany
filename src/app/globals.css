@@ -4,7 +4,7 @@
 @tailwind utilities;
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Roboto:wght@300;400&display=swap');
 
-body {
+/* body {
   font-family: 'Roboto', sans-serif;
   background-size: cover;
   background-position: center;
@@ -61,7 +61,7 @@ h1, h2 {
   .company-overview p {
     font-size: 1.25rem; /* Mengurangi ukuran font paragraf pada bagian company overview untuk perangkat seluler */
   }
-}
+} */
 
 /* Tambahkan ini ke file CSS global Anda, misalnya, globals.css */
 
