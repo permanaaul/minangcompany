@@ -25,26 +25,26 @@ const ClientCarousel = () => {
       loop
     >
       <Carousel.Slide>
-        <div style={{ width: '100%', height: '500px', position: 'relative' }}>
+        <div style={{ position: 'relative', width: '100%', height: '500px' }}>
           <Image
             src='/images/kotapadang.jpg'
-            layout="fill"
-            objectFit="cover"
             alt='Kota Padang 1'
-            loading="lazy"
+            layout='fill'
+            objectFit='cover'
+            loading='lazy'
             sizes="(max-width: 768px) 100vw, 50vw"
             srcSet="/images/kotapadang.jpg 640w, /images/kotapadang.jpg 1024w, /images/kotapadang.jpg 1920w"
           />
         </div>
       </Carousel.Slide>
       <Carousel.Slide>
-        <div style={{ width: '100%', height: '500px', position: 'relative' }}>
+        <div style={{ position: 'relative', width: '100%', height: '500px' }}>
           <Image
             src='/images/kotapadangdua.jpg'
-            layout="fill"
-            objectFit="cover"
             alt='Kota Padang 2'
-            loading="lazy"
+            layout='fill'
+            objectFit='cover'
+            loading='lazy'
             sizes="(max-width: 768px) 100vw, 50vw"
             srcSet="/images/kotapadangdua.jpg 640w, /images/kotapadangdua.jpg 1024w, /images/kotapadangdua.jpg 1920w"
           />
