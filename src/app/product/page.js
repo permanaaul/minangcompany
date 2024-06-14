@@ -53,66 +53,6 @@ export default function Products({limit}) {
       description: 'Minuman khas Minangkabau yang terbuat dari teh yang dicampur dengan telur ayam kampung, gula, dan perasan jeruk nipis.',
       image: '/images/teh_talua.jpg',
     },
-    {
-      id: 9,
-      name: 'Bika Talago',
-      description: 'Penganan tradisional yang terbuat dari singkong parut dan kelapa yang dipanggang.',
-      image: '/images/bika_talago.jpeg',
-    },
-    {
-      id: 10,
-      name: 'Pandan Cake',
-      description: 'Kue lembut dengan aroma pandan yang khas dan populer di daerah Sumatra Barat.',
-      image: '/images/kue_pandan.jpg',
-    },
-    {
-      id: 11,
-      name: 'Sambalado Tanak',
-      description: 'Sambal khas Minang yang terbuat dari cabai, teri, dan santan.',
-      image: '/images/sambalado_tanak.jpg',
-    },
-    {
-      id: 12,
-      name: 'Dendeng Batokok',
-      description: 'Dendeng sapi yang dipukul-pukul (batokok) dan disajikan dengan sambal.',
-      image: '/images/dendeng_batokok.jpg',
-    },
-    {
-      id: 13,
-      name: 'Asam Padeh',
-      description: 'Masakan ikan dengan kuah asam pedas yang sangat populer di Sumatra Barat.',
-      image: '/images/asam_padeh.jpg',
-    },
-    {
-      id: 14,
-      name: 'Sala Lauak',
-      description: 'Camilan berbentuk bola kecil yang terbuat dari adonan tepung beras dan ikan teri.',
-      image: '/images/sala_lauak.jpg',
-    },
-    {
-      id: 15,
-      name: 'Sate Padang',
-      description: 'Sate khas Padang yang disajikan dengan kuah kental yang terbuat dari tepung beras dan rempah-rempah.',
-      image: '/images/sate_padang.jpg',
-    },
-    {
-      id: 16,
-      name: 'Pisang Kapik',
-      description: 'Pisang bakar yang diisi dengan kelapa parut dan gula merah.',
-      image: '/images/pisang_kapik.jpg',
-    },
-    {
-      id: 17,
-      name: 'Ampiang Dadiah',
-      description: 'Hidangan penutup tradisional yang terbuat dari ampiang (sejenis bubur beras) dan dadiah (yogurt tradisional dari susu kerbau).',
-      image: '/images/ampiag_dadiah.jpg',
-    },
-    {
-      id: 18,
-      name: 'Karak Kaliang',
-      description: 'Hidangan penutup tradisional yang terbuat dari ampiang (sejenis bubur beras) dan dadiah (yogurt tradisional dari susu kerbau).',
-      image: '/images/karak_kaliang.jpg',
-    },
   ];
 
   const productsToShow = makanan.slice(0, limit);

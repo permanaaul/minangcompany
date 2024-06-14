@@ -11,9 +11,9 @@ const ClientCarousel = () => {
       if (emblaRef.current) {
         emblaRef.current.scrollNext();
       }
-    }, 2500); // Ganti slide setiap 2.5 detik
+    }, 2500); // Change slide every 2.5 seconds
 
-    return () => clearInterval(interval); // Bersihkan interval saat komponen unmount
+    return () => clearInterval(interval); // Clear interval on component unmount
   }, []);
 
   return (
@@ -31,9 +31,10 @@ const ClientCarousel = () => {
             alt='Kota Padang 1'
             layout='fill'
             objectFit='cover'
-            loading='lazy'
+            loading='eager'  // Ensure above-the-fold image loads eagerly
             sizes="(max-width: 768px) 100vw, 50vw"
             srcSet="/images/kotapadang.jpg 640w, /images/kotapadang.jpg 1024w, /images/kotapadang.jpg 1920w"
+            priority  // Preload hint for Next.js
           />
         </div>
       </Carousel.Slide>

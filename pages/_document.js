@@ -6,7 +6,6 @@ class MyDocument extends Document {
     return (
       <Html>
         <Head>
-          {/* Preload gambar dengan media query untuk desktop */}
           <link
             rel="preload"
             href="/images/kotapadang.jpg"
