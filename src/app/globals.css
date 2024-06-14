@@ -33,42 +33,41 @@ h1, h2 {
 /* Styles untuk layar kecil (misalnya, perangkat seluler) */
 @media (max-width: 768px) {
   .hero {
-    padding-top: 20px; /* Mengurangi padding atas pada bagian hero untuk perangkat seluler */
-    padding-bottom: 20px; /* Mengurangi padding bawah pada bagian hero untuk perangkat seluler */
+    padding-top: 10px;
+    padding-bottom: 10px;
   }
 
   .hero h1 {
-    font-size: 3rem; /* Mengurangi ukuran font judul pada bagian hero untuk perangkat seluler */
-    margin-top: 10px; /* Mengurangi margin atas pada judul untuk perangkat seluler */
-    margin-bottom: 10px; /* Mengurangi margin bawah pada judul untuk perangkat seluler */
+    font-size: 3rem;
+    margin-top: 10px;
+    margin-bottom: 10px;
   }
 
   .hero p {
-    font-size: 1.5rem; /* Mengurangi ukuran font paragraf pada bagian hero untuk perangkat seluler */
+    font-size: 1.5rem;
   }
 
   .company-overview {
-    padding-top: 20px; /* Mengurangi padding atas pada bagian company overview untuk perangkat seluler */
-    padding-bottom: 20px; /* Mengurangi padding bawah pada bagian company overview untuk perangkat seluler */
+    padding-top: 10px;
+    padding-bottom: 10px;
   }
 
   .company-overview h2 {
-    font-size: 2.5rem; /* Mengurangi ukuran font judul pada bagian company overview untuk perangkat seluler */
-    margin-top: 10px; /* Mengurangi margin atas pada judul untuk perangkat seluler */
-    margin-bottom: 10px; /* Mengurangi margin bawah pada judul untuk perangkat seluler */
+    font-size: 2.5rem;
+    margin-top: 10px;
+    margin-bottom: 10px;
   }
 
   .company-overview p {
-    font-size: 1.25rem; /* Mengurangi ukuran font paragraf pada bagian company overview untuk perangkat seluler */
+    font-size: 1.25rem;
   }
 }
 
 /* Tambahkan ini ke file CSS global Anda, misalnya, globals.css */
-
 .carousel-arrow {
   position: absolute;
   top: 50%;
-  transform: translateY(-1000%);
+  transform: translateY(-50%);
   background: black;
   color: white;
   padding: 0.3rem;
@@ -87,3 +86,4 @@ h1, h2 {
 .carousel-arrow.prev {
   left: 5px;
 }
+

@@ -12,6 +12,7 @@
     "@mantine/carousel": "^7.10.1",
     "@mantine/core": "^7.10.1",
     "@mantine/hooks": "^7.10.1",
+    "@next/bundle-analyzer": "^14.2.4",
     "autoprefixer": "^10.4.19",
     "axios": "^1.7.2",
     "embla-carousel-react": "^7.1.0",
