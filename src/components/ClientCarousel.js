@@ -32,8 +32,7 @@ const ClientCarousel = () => {
           layout="fill"
           objectFit="cover"
           alt='Kota Padang 1'
-          loading="eager"
-          priority={true}
+          loading="lazy"
           sizes="(max-width: 768px) 100vw, 50vw"
           srcSet="/images/kotapadang.jpg 640w, /images/kotapadang.jpg 1024w, /images/kotapadang.jpg 1920w"
         />
@@ -47,8 +46,7 @@ const ClientCarousel = () => {
           layout="fill"
           objectFit="cover"
           alt='Kota Padang 2'
-          loading="eager"
-          priority={true}
+          loading="lazy"
           sizes="(max-width: 768px) 100vw, 50vw"
           srcSet="/images/kotapadangdua.jpg 640w, /images/kotapadangdua.jpg 1024w, /images/kotapadangdua.jpg 1920w"
         />

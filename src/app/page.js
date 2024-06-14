@@ -4,10 +4,8 @@ import Link from 'next/link';
 import Image from 'next/image';
 import dynamic from 'next/dynamic';
 
-
 const ClientCarousel = dynamic(() => import('../components/ClientCarousel'), { ssr: false });
 const Products = dynamic(() => import('./product/page'), { ssr: false });
-
 
 export default function HomePage() {
   const [teamMember, setTeamMember] = useState(null);
@@ -57,21 +55,26 @@ export default function HomePage() {
             {teamMember ? (
               <div className="text-center">
                 <div style={{ width: '200px', height: '200px', position: 'relative' }}>
-                <Image
-                  src={teamMember.picture.large}
-                  alt={`${teamMember.name.first} ${teamMember.name.last}`}
-                  width={200}
-                  height={200}
-                  layout="fixed"
-                  objectFit="cover"
-                  className="rounded-full"
-                />
+                  <Image
+                    src={teamMember.picture.large}
+                    alt={`${teamMember.name.first} ${teamMember.name.last}`}
+                    width={200}
+                    height={200}
+                    layout="fixed"
+                    objectFit="cover"
+                    className="rounded-full"
+                  />
                 </div>
                 <p className="text-xl font-semibold">{`${teamMember.name.first} ${teamMember.name.last}`}</p>
                 <p className="text-gray-400">{teamMember.email}</p>
               </div>
             ) : (
-              <p className="text-xl">Loading team member...</p>
+              <div className="text-center">
+                <div style={{ width: '200px', height: '200px', position: 'relative', backgroundColor: 'gray' }}>
+                  {/* Placeholder for Team Member Image */}
+                </div>
+                <p className="text-xl">Loading team member...</p>
+              </div>
             )}
           </div>
         </div>
