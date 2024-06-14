@@ -102,7 +102,7 @@ export default function HomePage() {
         <div className="space-y-8 max-w-4xl mx-auto">
         <blockquote className="p-6 border-l-4 border-gray-600 bg-gray-700 rounded-lg shadow-md">
   <p className="text-lg italic font-semibold">
-    "The best products I've ever used! Highly recommend to everyone."
+    &quot;The best products I&apos;ve ever used! Highly recommend to everyone.&quot;
   </p>
   <footer className="mt-2 text-sm text-gray-100">
     - Customer A
@@ -111,7 +111,7 @@ export default function HomePage() {
 
 <blockquote className="p-6 border-l-4 border-gray-600 bg-gray-700 rounded-lg shadow-md">
   <p className="text-lg italic font-semibold">
-    "Fantastic customer service and top-quality products."
+    &quot;Fantastic customer service and top-quality products.&quot;
   </p>
   <footer className="mt-2 text-sm text-gray-100">
     - Customer B
@@ -120,12 +120,13 @@ export default function HomePage() {
 
 <blockquote className="p-6 border-l-4 border-gray-600 bg-gray-700 rounded-lg shadow-md">
   <p className="text-lg italic font-semibold">
-    "I love the variety of products available. There's something for everyone."
+    &quot;I love the variety of products available. There&apos;s something for everyone.&quot;
   </p>
   <footer className="mt-2 text-sm text-gray-100">
     - Customer C
   </footer>
 </blockquote>
+
 
         </div>
       </section>
