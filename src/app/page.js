@@ -62,33 +62,34 @@ export default function HomePage() {
     </div>
 
     <div className="p-6 bg-gray-700 rounded-lg shadow-lg hover:bg-gray-600 transition duration-300">
-      <h3 className="text-3xl font-semibold mb-4">Our Team</h3>
-      {teamMember ? (
-        <div className="text-center">
-          <div style={{ width: '200px', height: '200px', position: 'relative' }}>
-            <Image
-              src={teamMember.picture.large}
-              alt={`${teamMember.name.first} ${teamMember.name.last}`}
-              width={200}
-              height={200}
-              layout="fixed"
-              objectFit="cover"
-              className="rounded-full"
-              priority  // Prioritizes loading
-            />
-          </div>
-          <p className="text-xl font-semibold">{`${teamMember.name.first} ${teamMember.name.last}`}</p>
-          <p className="text-gray-400">{teamMember.email}</p>
-        </div>
-      ) : (
-        <div className="text-center">
-          <div style={{ width: '200px', height: '200px', position: 'relative', backgroundColor: 'gray' }}>
-            {/* Placeholder for Team Member Image */}
-          </div>
-          <p className="text-xl">Loading team member...</p>
-        </div>
-      )}
+  <h3 className="text-3xl font-semibold mb-4">Our Team</h3>
+  {teamMember ? (
+    <div className="text-center">
+      <div style={{ width: '200px', height: '200px', position: 'relative' }}>
+        <Image
+          src={teamMember.picture.large}
+          alt={`${teamMember.name.first} ${teamMember.name.last}`}
+          width={200}
+          height={200}
+          layout="fixed"
+          objectFit="cover"
+          className="rounded-full"
+          priority  // Prioritizes loading
+        />
+      </div>
+      <p className="text-xl font-semibold text-white">{`${teamMember.name.first} ${teamMember.name.last}`}</p>
+      <p className="text-gray-300">{teamMember.email}</p>
     </div>
+  ) : (
+    <div className="text-center">
+      <div style={{ width: '200px', height: '200px', position: 'relative', backgroundColor: 'gray' }}>
+        {/* Placeholder for Team Member Image */}
+      </div>
+      <p className="text-xl text-white">Loading team member...</p>
+    </div>
+  )}
+</div>
+
   </div>
 </section>
 
